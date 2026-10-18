@@ -1,0 +1,7 @@
+2026-10-18 15:15:22 | [INFO] | APIExtractor | Consumindo API REST (Página 1/1): https://api.worldbank.org/v2/country/CZE/indicator/FP.CPI.TOTL.ZG?format=json&per_page=50&page=1
+2026-10-18 15:15:23 | [INFO] | APIExtractor | Consumindo API REST (Página 2/2): https://api.worldbank.org/v2/country/CZE/indicator/FP.CPI.TOTL.ZG?format=json&per_page=50&page=2
+2026-10-18 15:15:24 | [INFO] | APIExtractor | Extração via API concluída: 66 registros coletados.
+2026-10-18 15:19:25 | [INFO] | APIExtractor | Consumindo API REST (Página 1/1): https://api.worldbank.org/v2/country/CZE/indicator/FP.CPI.TOTL.ZG?format=json&date=1993:1998&per_page=50&page=1
+2026-10-18 15:19:26 | [INFO] | APIExtractor | Extração via API concluída: 6 registros coletados para o período 1993:1998.
+2026-10-18 15:27:52 | [INFO] | WebScraper | Iniciando Web Scraping na URL: https://pt.wikipedia.org/wiki/República_Tcheca
+2026-10-18 15:27:53 | [INFO] | WebScraper | Web Scraping finalizado: 40 linhas extraídas.
