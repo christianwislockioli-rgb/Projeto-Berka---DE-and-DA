@@ -1,0 +1,37 @@
+# ============================================================================
+# ARQUIVO: .github/workflows/ci_pipeline.yml
+# DESCRIÇÃO: Esteira de Integração Contínua (CI/CD) com Pytest e Flake8
+# ============================================================================
+name: Data Engineering CI/CD Pipeline
+
+on:
+  push:
+    branches: [ "main", "develop" ]
+  pull_request:
+    branches: [ "main", "develop" ]
+
+jobs:
+  quality-and-unit-tests:
+    name: Pytest (Ingestão, LGPD SHA-256 & SCD Tipo 2)
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: 1. Checkout do Código
+        uses: actions/checkout@v4
+
+      - name: 2. Configurar Python 3.11
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+          cache: "pip"
+
+      - name: 3. Instalar Dependências de Teste e Engenharia
+        run: |
+          python -m pip install --upgrade pip
+          pip install pytest pandas numpy scipy requests beautifulsoup4 sqlalchemy psycopg2-binary pymongo
+
+      - name: 4. Executar Suíte de Testes Automatizados (Pytest)
+        env:
+          PYTHONPATH: .
+        run: |
+          pytest tests/ -v

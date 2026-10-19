@@ -1,0 +1,28 @@
+# ============================================================================
+# ARQUIVO: .gitignore
+# Bloqueio de ficheiros pesados (.asc), variáveis sensíveis (.env) e caches
+# ============================================================================
+
+# Variáveis de ambiente e segredos Cloud
+.env
+*.pem
+*.key
+
+# Dados brutos pesados locais (preserva apenas o .gitkeep da pasta data/raw/)
+data/raw/*.asc
+data/raw/*.csv
+data/raw/*.parquet
+!data/raw/.gitkeep
+
+# Caches do Python, Pytest e Jupyter
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.ipynb_checkpoints/
+logs/
+*.log
+
+# Estado local do Terraform
+.terraform/
+*.tfstate
+*.tfstate.*
